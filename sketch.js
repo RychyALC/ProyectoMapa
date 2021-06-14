@@ -11,18 +11,31 @@ let mappa = new mappa('Leaflet'); */
 
 
 function setup(){
-  /* canvas = createCanvas(640,640);
-  myMap = mappa.tileMap(options); 
-  myMap.overlay(canvas) 
-
-  fill(200, 100, 100);
-  
-  
-  // Only redraw the point when the map changes and not every frame.
-  myMap.onChange(drawPoint); */
+  canvas = createCanvas(windowWidth-31,180);
 }
 
 function draw(){
+  background(230,200)
+  fill(255);
+  rect(10,10,width-15,50,20);
+  
+
+
+
+  fill(255,255,0)
+  noStroke();
+  rect(10,70,width/2,100,20);
+  
+  fill(50);
+  textStyle(BOLD);
+  textSize(25);
+  text("INFECTADOS : 8095751",200,130);
+  rect((width/2)+20,70,width/2-25,100,20);
+  fill(255);
+  text("FALLECIDOS : 83507",width/2+200,130);
+  textAlign(CENTER);
+  fill(50)
+  text("COVID-19 Mexico 2019",width/2,45)
 }
 
 /* function drawPoint(){
