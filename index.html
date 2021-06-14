@@ -82,6 +82,27 @@
         <script src="sketch.js"></script>
 
 <script type="text/javascript">
+const url = 'https://api.apify.com/v2/key-value-stores/vpfkeiYLXPIDIea2T/records/LATEST?disableRedirect=true'
+let infectados;
+let fallecidos;
+let estados = [];
+/* fetch(url)
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.log(err)); */
+//function fallecidosPais(){
+  fetch(url)
+  .then(res => res.json())
+  .then(data => {
+    infectados = data.infected
+    fallecidos = data.deceased;
+    estados = data
+
+    console.log(fallecidos)}
+  )
+  .catch(err => console.log(err));  
+//}
+
 $(".mapcontainer").mapael(
 {
     "map": {
@@ -94,7 +115,7 @@ $(".mapcontainer").mapael(
                   "quintana roo": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Quintana Roo</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Quintana Roo</span><br />Infectados : "+0+"<br />Fallecidos : "+0}
                   },
                   "yucatan": {
                       value: "0",

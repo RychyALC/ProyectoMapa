@@ -17,6 +17,7 @@ function setup(){
 
   fill(200, 100, 100);
   
+  
   // Only redraw the point when the map changes and not every frame.
   myMap.onChange(drawPoint); */
 }
