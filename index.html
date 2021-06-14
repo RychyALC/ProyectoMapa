@@ -85,21 +85,20 @@
 const url = 'https://api.apify.com/v2/key-value-stores/vpfkeiYLXPIDIea2T/records/LATEST?disableRedirect=true'
 let infectados;
 let fallecidos;
-let estados = [];
-/* fetch(url)
+let campeche;
+fetch(url)
 .then(res => res.json())
-.then(data => console.log(data))
-.catch(err => console.log(err)); */
+.then(data => console.log(data.State))
+.catch(err => console.log(err));
 //function fallecidosPais(){
   fetch(url)
   .then(res => res.json())
   .then(data => {
     infectados = data.infected
     fallecidos = data.deceased;
-    estados = data
-
-    console.log(fallecidos)}
-  )
+    console.log(data.State.Campeche.infected)
+    console.log(infectados+" ",fallecidos)
+  })
   .catch(err => console.log(err));  
 //}
 
@@ -115,162 +114,162 @@ $(".mapcontainer").mapael(
                   "quintana roo": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Quintana Roo</span><br />Infectados : "+0+"<br />Fallecidos : "+0}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Quintana Roo</span><br />Infectados : "+12590+"<br />Fallecidos : "+1743}
                   },
                   "yucatan": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Yucatan</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Yucatan</span><br />Infectados : "+19426+"<br />Fallecidos : "+1635}
                   },
                   "campeche": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Campeche</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Campeche</span><br />Infectados : "+6235+"<br />Fallecidos : "+840}
                   },
                   "tabasco": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Tabasco</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Tabasco</span><br />Infectados : "+32868+"<br />Fallecidos : "+2893}
                   },
                   "chiapas": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Chiapas</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Chiapas</span><br />Infectados : "+8079+"<br />Fallecidos : "+1323}
                   },
                   "oaxaca": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Oaxaca</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Oaxaca</span><br />Infectados : "+18964+"<br />Fallecidos : "+1554}
                   },
                   "tlaxcala": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Tlaxcala</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Tlaxcala</span><br />Infectados : "+7820+"<br />Fallecidos : "+1133}
                   },
                   "tamaulipas": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Tamaulipas</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Tamaulipas</span><br />Infectados : "+30066+"<br />Fallecidos : "+2381}
                   },
                   "veracruz": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Veracruz</span><br />Population :0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Veracruz</span><br />Infectados : "+34679+"<br />Fallecidos : "+4591}
                   },
                   "puebla": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Puebla</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Puebla</span><br />Infectados : "+32922+"<br />Fallecidos : "+4372}
                   },
                   "hidalgo": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Hidalgo</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Hidalgo</span><br />Infectados : "+13844+"<br />Fallecidos : "+2061}
                   },
                   "nuevo leon": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Nuevo Leon</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Nuevo Leon</span><br />Infectados : "+43667+"<br />Fallecidos : "+3306}
                   },
                   "morelia": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Morelia</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Morelia</span><br />Infectados : "+6283+"<br />Fallecidos : "+1125}
                   },
                   "ciudad de mexico": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Ciudad de Mexico</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Ciudad de Mexico</span><br />Infectados : "+138329+"<br />Fallecidos : "+10730}
                   },
                   "estado de mexico": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Estado de Mexico</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Estado de Mexico</span><br />Infectados : "+88619+"<br />Fallecidos : "+13007}
                   },
                   "guanajuato": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Guanajuato</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Guanajuato</span><br />Infectados : "+43054+"<br />Fallecidos : "+3099}
                   },
                   "guerrero": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Guerrero</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Guerrero</span><br />Infectados : "+20295+"<br />Fallecidos : "+2057}
                   },
                   "queretaro": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Queretaro</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Queretaro</span><br />Infectados : "+10086+"<br />Fallecidos : "+997}
                   },
                   "san luis potosi": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">San Luis Potosi</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">San Luis Potosi</span><br />Infectados : "+24279+"<br />Fallecidos : "+1782}
                   },
                   "zacatecas": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Zacatecas</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Zacatecas</span><br />Infectados : "+8122+"<br />Fallecidos : "+783}
                   },
                   "aguascalientes": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Aguascalientes)</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Aguascalientes)</span><br />Infectados : "+7753+"<br />Fallecidos : "+676}
                   },
                   "coahuila": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Coahuila</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Coahuila</span><br />Infectados : "+28317+"<br />Fallecidos : "+1996}
                   },
                   "michoacan": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Michoacan</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Michoacan</span><br />Infectados : "+21927+"<br />Fallecidos : "+1827}
                   },
                   "durango": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Durango</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Durango</span><br />Infectados : "+9844+"<br />Fallecidos : "+689}
                   },
                   "nayarit": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Nayarit</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Nayarit</span><br />Infectados : "+6247+"<br />Fallecidos : "+782}
                   },
                   "colima": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Colima</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Colima</span><br />Infectados : "+5671+"<br />Fallecidos : "+579}
                   },
                   "jalisco": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Jalisco</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Jalisco</span><br />Infectados : "+29252+"<br />Fallecidos : "+3509}
                   },
                   "chihuahua": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Chihuahua</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Chihuahua</span><br />Infectados : "+12753+"<br />Fallecidos : "+1483}
                   },
                   "sinaloa": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Sinaloa</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Sinaloa</span><br />Infectados : "+19791+"<br />Fallecidos : "+3366}
                   },
                   "sonora": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Sonora</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Sonora</span><br />Infectados : "+35177+"<br />Fallecidos : "+2971}
                   },
                   "baja california sur": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Baja California Sur</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Baja California Sur</span><br />Infectados : "+10925+"<br />Fallecidos : "+537}
                   },
                   "baja california": {
                       value: "0",
                       href: "#",
-                      tooltip: {content: "<span style=\"font-weight:bold;\">Baja California</span><br />Population : 0"}
+                      tooltip: {content: "<span style=\"font-weight:bold;\">Baja California</span><br />Infectados : "+22137+"<br />Fallecidos : "+3680}
                   }
               }
 }
