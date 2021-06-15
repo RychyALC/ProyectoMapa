@@ -29,7 +29,7 @@ function draw(){
   fill(50);
   textStyle(BOLD);
   textSize(25);
-  text("INFECTADOS : 8095751",200,130);
+  text("INFECTADOS : 809751",200,130);
   rect((width/2)+20,70,width/2-25,100,20);
   fill(255);
   text("FALLECIDOS : 83507",width/2+200,130);
